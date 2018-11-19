@@ -1,21 +1,98 @@
 @charset "UTF-8";
 /* CSS Document */
 
-/* henter et andet style sheet ind i mit eget */
+/* henter et andet style sheet ind i vores*/
 @import "simplegrid.css";
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
 
+li {
+	margin-left: 0;
+	height: auto;
+	max-width: 33%;
+    float: right;
+}
+li.logo{
+	float: left;
+}
+li img{
+	height:auto;
+	max-width: 250px;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
 body {
+	padding-left: 0;
+	margin-left: 0;
 	background: white;
 }
 .content {
-	background: #ddd;
+
 }
+
 [class*='col-']{
-	margin-bottom: 100px;
+
 }
+.burger:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
 .bar{
+	height: 87px;
 	padding-right: 0px; 
 }
-.bar .content{
-	background: #B5B2B0;
+
+.bar p{
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
 }
+.bar .content{
+	max-width: 250px;
+	position: relative;
+    text-align: center;
+}
+.bar img{
+	max-width: 100%;
+    height: auto;
+}
+@media only screen and (max-width: 767px) {
+	.desktop{
+		display:none !important;
+		height: 0;
+		width: 0;
+	}
+} 
+@media only screen and (min-width: 992px) {
+	.burger{
+		display:none !important;
+		height: 0;
+		width: 0;
+	}
+}
+
