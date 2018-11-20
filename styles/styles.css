@@ -3,96 +3,221 @@
 
 /* henter et andet style sheet ind i vores*/
 @import "simplegrid.css";
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+/* Dropdown content (hidden by default) */
+
+
+.dropdown {
+    padding-top: 2px;
+    padding-right: 16px;
+    float: none;
     overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
 }
-
-li {
-	margin-left: 0;
-	height: auto;
-	max-width: 33%;
-    float: right;
-}
-li.logo{
-	float: left;
-}
-li img{
-	height:auto;
-	max-width: 250px;
-}
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover:not(.active) {
-    background-color: #111;
-}
-body {
-	padding-left: 0;
-	margin-left: 0;
-	background: white;
-}
-.content {
-
-}
-
-[class*='col-']{
-
-}
-.burger:hover .dropdown-content {
-    display: block;
+.dropdown .dropbtn {
+    color: rgba(0,0,0,0);
+    background-image: url("../images/burger.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    font-size: 1px;
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
 }
 .dropdown-content {
+	right: 0;
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
     z-index: 1;
 }
-
-.bar{
-	height: 87px;
-	padding-right: 0px; 
+.dropdown-content a {
+	
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    text-decoration-color: black;
+    display: block;
+    text-align: left;
 }
-
-.bar p{
-	font-family: 'Lato', sans-serif;
-	font-weight: 700;
+.navbar .dropdown .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    text-decoration-color: black;
+    display: block;
+    text-align: left;
 }
-.bar .content{
-	max-width: 250px;
-	position: relative;
-    text-align: center;
+.navbar .dropdownmenu .dropdown {
+	float: right;
 }
-.bar img{
-	max-width: 100%;
+div.logo {
+    display: block;
     height: auto;
+    max-width: 150px;
+    background: #FFFFFF;
+    padding: 33.56px 33.6px 33.6px 0;
+    float: left;
 }
-@media only screen and (max-width: 767px) {
-	.desktop{
-		display:none !important;
-		height: 0;
-		width: 0;
-	}
-} 
-@media only screen and (min-width: 992px) {
-	.burger{
-		display:none !important;
-		height: 0;
-		width: 0;
-	}
+#myLinks {
+    display: none;
+}
+div.logo img {
+    height: auto;
+    max-width: 150px;
+}
+.navbar .bar {
+    height: 33.6px;
+    background-color: #3D6BB4;
+}
+.navbar .udreBar {
+    padding: 33.6px 0;
+}
+.navbar .stykke {
+    height: 33.6px;
+    background-color: #FFFFFF;
+    float: left;
+}
+.navbar .stykke img {
+    height: 33.6px;
+}
+body {
+    font-family: 'lato';
+    padding-left: 0;
+    margin-left: 0;
+    background: white;
+}
+.content {
+}
+[class*='col-'] {
+}
+.navbar {
+    overflow: hidden;
+    background-color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+.navbar a {
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
 }
 
+@media only screen and (min-width : 555px) and (max-width:764px) {
+	.dropdown .dropbtn {
+    color: rgba(0,0,0,0);
+    background-image: url("../images/burger.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+.navbar .bar {
+    height: 56px;
+    background-color: #3D6BB4;
+}
+.navbar .udreBar {
+    padding: 56px 0;
+}
+.navbar .stykke {
+    height: 56px;
+    background-color: #FFFFFF;
+    float: left;
+}
+.navbar .stykke img {
+    height: 56px;
+}
+.desktop {
+    display: none !important;
+    height: 0;
+    width: 0;
+}
+div.logo img {
+    height: auto;
+    max-width: 250px;
+}
+div.logo {
+    display: block;
+    height: auto;
+    max-width: 250px;
+    background: #FFFFFF;
+    padding: 56px 56px 56px 0;
+    float: left;
+}
+}
+
+@media only screen and (max-width: 420px) {
+.desktop {
+    display: none !important;
+    height: 0;
+    width: 0;
+}
+}
+
+@media only screen and (max-width: 320px) {
+.desktop {
+    display: none !important;
+    height: 0;
+    width: 0;
+}
+}
+
+@media only screen and (min-width: 765px) {
+.navbar .bar {
+    height: 56px;
+    background-color: #3D6BB4;
+}
+.navbar .udreBar {
+    padding: 56px 0;
+}
+.navbar .stykke {
+    height: 56px;
+    background-color: #FFFFFF;
+    float: left;
+}
+.navbar .stykke img {
+    height: 56px;
+}
+div.logo {
+    display: block;
+    height: auto;
+    max-width: 250px;
+    background: #FFFFFF;
+    padding: 56px 56px 56px 0;
+    float: left;
+}
+.burger {
+    display: none !important;
+    height: 0;
+    width: 0;
+}
+div.logo img {
+    height: auto;
+    max-width: 250px;
+}
+.desktop {
+    float: right;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    margin: 0;
+}
+}
