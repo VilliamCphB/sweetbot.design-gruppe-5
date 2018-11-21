@@ -5,7 +5,29 @@
 @import "simplegrid.css";
 /* Dropdown content (hidden by default) */
 
+.ceo{
+	font-family: 'lato';
+	text-align: center;
 
+}
+.ceo h2{
+	font-weight: 700;
+
+}
+.ceo img{
+	height: auto;
+	max-width: 40%;
+	margin: 10px 10px 0 10px;
+}
+.medarbejder img{
+	height: auto;
+	max-width: 40%;
+	margin: 10px 10px;
+}
+.medarbejder{
+	text-align: center;
+	font-family: 'lato';
+}
 .dropdown {
     padding-top: 2px;
     padding-right: 16px;
@@ -29,6 +51,17 @@
 .punkter .content{
 	text-align: center;
 }
+.hjemmeside {
+    max-width: 1920px;
+    position: relative;
+    text-align: center;
+	padding: 0 10px;
+    margin: 0 auto; /* Center it */
+}
+.hjemmeside img {
+    width: 100%;
+    height: auto;
+}
 .dropdown-content {
     right: 0;
     display: none;
@@ -39,9 +72,11 @@
     z-index: 1;
 }
 .pakke{
-	border: thin solid #0E0C0C;
+	background: #B5B2B0;
+	/*border: thin solid #0E0C0C;*/
 }
 .pakke .content{
+	
 	text-align: center;
 }
 .dropdown-content a {
@@ -325,7 +360,12 @@ div.logo {
 }
 
 @media only screen and (min-width: 769px) {
-	
+	.hjemmesidecut{
+		max-height: 350px;
+	}
+	.ceo{
+		height: 50%;
+	}
 	.pakke{
 		height: 110px;
 	}
