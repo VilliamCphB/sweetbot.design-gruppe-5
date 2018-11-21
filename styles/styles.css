@@ -26,8 +26,11 @@
     font-family: inherit;
     margin: 0;
 }
+.punkter .content{
+	text-align: center;
+}
 .dropdown-content {
-	right: 0;
+    right: 0;
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -35,8 +38,13 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
+.pakke{
+	border: thin solid #0E0C0C;
+}
+.pakke .content{
+	text-align: center;
+}
 .dropdown-content a {
-	
     float: none;
     color: black;
     padding: 12px 16px;
@@ -55,7 +63,7 @@
     text-align: left;
 }
 .navbar .dropdownmenu .dropdown {
-	float: right;
+    float: right;
 }
 div.logo {
     display: block;
@@ -89,13 +97,16 @@ div.logo img {
 }
 body {
     font-family: 'lato';
-    padding-left: 0;
-    margin-left: 0;
+    padding: 0;
+    margin: 0;
     background: white;
 }
 .content {
+    font-family: 'lato';
 }
 [class*='col-'] {
+    padding: 0;
+    margin: 0;
 }
 .navbar {
     overflow: hidden;
@@ -109,9 +120,37 @@ body {
     text-align: center;
     text-decoration: none;
 }
+h1.mission {
+    font-family: 'lato';
+}
+.mission {
+    position: absolute; /* Position the background text */
+    bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    width: 100%; /* Full width */
+    padding: 20px; /* Some padding */
+}
+#mission {
+    max-width: 1920px;
+    position: relative;
+    text-align: center;
+    margin: 0 auto; /* Center it */
+}
+#mission img {
+    width: 100%;
+    height: auto;
+}
 
 @media only screen and (min-width : 765px) and (max-width:768px) {
-	.dropdown .dropbtn {
+.mission {
+    padding: 10px;
+}
+.mission h1 {
+    font-size: 18px;
+}
+.dropdown .dropbtn {
     color: rgba(0,0,0,0);
     background-image: url("../images/burger.png");
     background-size: contain;
@@ -158,8 +197,15 @@ div.logo {
     float: left;
 }
 }
+
 @media only screen and (min-width : 555px) and (max-width:764px) {
-	.dropdown .dropbtn {
+.mission {
+    padding: 10px;
+}
+.mission h1 {
+    font-size: 18px;
+}
+.dropdown .dropbtn {
     color: rgba(0,0,0,0);
     background-image: url("../images/burger.png");
     background-size: contain;
@@ -206,7 +252,14 @@ div.logo {
     float: left;
 }
 }
+
 @media only screen and (max-width: 554px) {
+.mission {
+    padding: 5px;
+}
+.mission h1 {
+    font-size: 18px;
+}
 .desktop {
     display: none !important;
     height: 0;
@@ -215,6 +268,12 @@ div.logo {
 }
 
 @media only screen and (max-width: 320px) {
+.mission {
+    padding: 5px;
+}
+.mission h1 {
+    font-size: 10px;
+}
 .desktop {
     display: none !important;
     height: 0;
@@ -222,7 +281,64 @@ div.logo {
 }
 }
 
+@media only screen and (min-width: 769px) and (max-width: 850px) {
+.mission h1 {
+    font-size: 18px !important;
+}
+.desktop a {
+    font-size: 13.6px;
+}
+}
+
+@media only screen and (min-width: 1001px) {
+.mission h1 {
+    font-size: 24px;
+}
+.desktop a {
+    margin-right: 15px;
+    font-size: 19px;
+}
+}
+
+@media only screen and (min-width: 1200px) {
+.desktop a {
+    margin-right: 55px;
+}
+}
+
+@media only screen and (min-width: 1450px) {
+.desktop a {
+    margin-right: 105px;
+}
+}
+
+@media only screen and (min-width: 1600px) {
+.desktop a {
+    margin-right: 145px;
+}
+}
+
+@media only screen and (min-width: 1800px) {
+.desktop a {
+    margin-right: 185px;
+}
+}
+
 @media only screen and (min-width: 769px) {
+	
+	.pakke{
+		height: 110px;
+	}
+.punkter .content p {
+    max-width: 80%;
+}
+.punkter .content {
+	text-align: left;
+    height: 350px;
+}
+.mission h1 {
+    font-size: 20px;
+}
 .navbar .bar {
     height: 56px;
     background-color: #3D6BB4;
