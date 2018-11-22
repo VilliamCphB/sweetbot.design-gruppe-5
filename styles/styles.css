@@ -4,6 +4,77 @@
 /* henter et andet style sheet ind i vores*/
 @import "simplegrid.css";
 /* Dropdown content (hidden by default) */
+main {
+	height: 650px;
+}
+#form {
+    margin: 0 auto;
+	width: 300px;
+	max-width: 300px;
+}
+.tak {
+	text-align: center;
+}
+input[type="text"],
+input[type="email"],
+
+
+textarea {
+    width: 100%;
+    border: 1px solid #CCC;
+    background: none;
+    margin: 0 0 5px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #2A1000;
+    max-width: 200%;
+	}
+	#knap  {
+	
+    cursor: pointer;
+    width: 60%;
+    border: none;
+    background: #DF9B67;
+    color: #FFF;
+    margin: 0 0 5px 24%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+select {
+	border: 1px solid #CCC;
+    background: none;
+    margin: 0 0 5px;
+    padding: 10px;
+	
+    border-radius: 5px;
+    color: #2A1000; 
+	
+}
+.hotbot-imgs {
+	margin-top: 10px; 
+	text-align: center;
+}
+.footer{
+	background-color: #3D6BB4;
+}
+.footer .links a{
+	text-decoration: none;
+	color: white;
+	text-align: center;
+	
+}
+.footer .links p{
+	margin: 10px 0 0 10px;
+}
+.footer .icons{
+	justify-content: flex-end;
+	display: flex;
+}
+.copyright {
+	text-align: center;
+}
+
 li {
     margin-left: -40px;
     list-style: none;
@@ -75,20 +146,9 @@ nav {
     height: auto;
     float: right;
 }
-.dropdown .dropbtn {
-    color: rgba(0,0,0,0);
-    background-image: url("../images/burger.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    font-size: 1px;
-    border: none;
-    outline: none;
-    padding: 10px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-}
+/*.content {
+	margin-bottom: -500px;
+}*/
 .punkter .content {
     text-align: center;
 }
@@ -115,8 +175,27 @@ nav {
 .pakke {
     background: #B5B2B0;/*border: thin solid #0E0C0C;*/
 }
-.pakke .content {
+.sweetbot-pakker p {
+	margin-left: 10px;
+}
+
+.bunden {
+	vertical-align: bottom;
+	display: inline-block;
+	
+}
+.pakke .content h2, h3 {
     text-align: center;
+}
+.hotbot-pakker {
+	height: 180px;
+	background-color: #B5B2B0;
+}
+.hotbot-pakker h2, h3{
+	text-align: center;
+}
+.hotbot-pakker p{
+	margin-left: 10px;
 }
 .dropdown-content a {
     float: none;
@@ -179,10 +258,11 @@ body {
     font-family: 'lato';
 }
 [class*='col-'] {
-    padding: 0;
+    padding: 0 !important;
     margin: 0;
 }
 .navbar {
+	padding: 0 !important;
     overflow: hidden;
     background-color: #ffffff;
     font-family: 'Lato', sans-serif;
@@ -273,6 +353,9 @@ div.logo {
 }
 
 @media only screen and (min-width : 555px) and (max-width:768px) {
+	#footer .footer{
+		bottom:0;
+	}
 nav .burger img {
     max-width: 50%;
 }
@@ -428,7 +511,7 @@ nav .burger img {
     height: 50%;
 }
 .pakke {
-    height: 110px;
+    height: 250px;
 }
 .punkter h1{
 		text-align: center;
@@ -489,3 +572,50 @@ div.logo img {
     margin: 0;
 }
 }
+#footer {
+	position: relative;
+	background-color: #749CD3;
+		color: white;
+	font-family: 'lato';
+	font-weight: bolder;
+	/*min-height: 77px;*/
+    right: 0;
+	padding-bottom: 0 !important;
+	margin: 0 !important;
+  bottom: 0;
+  left: 0;
+    width: 100%;
+}
+#tlf-nr {
+	margin-top: 10px;
+}
+@media only screen and (max-width: 500px){
+	.kontakt-icon1 , .kontakt-icon2 {
+	bottom: -7px;
+	}
+	
+}
+@media only screen and (max-width: 500px){
+	.kontakt-icon1 {
+		margin-left:16%;
+	}
+	}
+@media only screen and (min-width: 500px){
+	.kontakt-icon1 , .kontakt-icon2 {
+		display:none;
+	}
+}
+@media only screen and (max-width: 500px){
+	#tlf-nr , #mail-text {
+		display:none;
+	}}
+@media only screen and (min-width: 1024px){
+	
+	.fb , .insta , .linkedin{
+		width: 60%;
+		height: auto;
+		margin-top: 8px;
+		
+	}}
+.fb , .insta , .linkedin{
+	margin-right: 20px;}
