@@ -4,35 +4,76 @@
 /* henter et andet style sheet ind i vores*/
 @import "simplegrid.css";
 /* Dropdown content (hidden by default) */
-
-.ceo{
-	font-family: 'lato';
-	text-align: center;
-
+li {
+    margin-left: -40px;
+    list-style: none;
+    position: relative;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
-.ceo h2{
-	font-weight: 700;
-
+ul {
+    position: absolute;
 }
-.ceo img{
-	height: auto;
-	max-width: 40%;
-	margin: 10px 10px 0 10px;
+li a {
+    color: black !important;
 }
-.medarbejder img{
-	height: auto;
-	max-width: 40%;
-	margin: 10px 10px;
+.ceo {
+    font-family: 'lato';
+    text-align: center;
 }
-.medarbejder{
-	text-align: center;
-	font-family: 'lato';
+.ceo h2 {
+    font-weight: 700;
+}
+.ceo img {
+    height: auto;
+    max-width: 40%;
+    margin: 10px 10px 0 10px;
+}
+.medarbejder img {
+    height: auto;
+    max-width: 40%;
+    margin: 10px 10px;
+}
+.medarbejder {
+    text-align: center;
+    font-family: 'lato';
+}
+nav .burger img {
+    float: right;
+    max-width: 40%;
+}
+nav {
+    background-color: #293134;
+    margin: 10px 0 0 0;
+}
+.dropdownmenu {
+    max-width: 500px;
+    ;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+#dropdownmenu {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    top: 0;
+    left: 0;
 }
 .dropdown {
+    max-width: 20%;
     padding-top: 2px;
     padding-right: 16px;
-    float: none;
+    float: right;
     overflow: hidden;
+}
+#burger {
+    max-width: 70%;
+    height: auto;
+    float: right;
 }
 .dropdown .dropbtn {
     color: rgba(0,0,0,0);
@@ -48,14 +89,14 @@
     font-family: inherit;
     margin: 0;
 }
-.punkter .content{
-	text-align: center;
+.punkter .content {
+    text-align: center;
 }
 .hjemmeside {
     max-width: 1920px;
     position: relative;
     text-align: center;
-	padding: 0 10px;
+    padding: 0 10px;
     margin: 0 auto; /* Center it */
 }
 .hjemmeside img {
@@ -71,13 +112,11 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
-.pakke{
-	background: #B5B2B0;
-	/*border: thin solid #0E0C0C;*/
+.pakke {
+    background: #B5B2B0;/*border: thin solid #0E0C0C;*/
 }
-.pakke .content{
-	
-	text-align: center;
+.pakke .content {
+    text-align: center;
 }
 .dropdown-content a {
     float: none;
@@ -233,7 +272,15 @@ div.logo {
 }
 }
 
-@media only screen and (min-width : 555px) and (max-width:764px) {
+@media only screen and (min-width : 555px) and (max-width:768px) {
+nav .burger img {
+    max-width: 50%;
+}
+#burger {
+    max-width: 40%;
+    height: auto;
+    float: right;
+}
 .mission {
     padding: 10px;
 }
@@ -289,11 +336,16 @@ div.logo {
 }
 
 @media only screen and (max-width: 554px) {
+#burger {
+    max-width: 40%;
+    height: auto;
+    float: right;
+}
 .mission {
     padding: 5px;
 }
 .mission h1 {
-    font-size: 18px;
+    font-size: 15px;
 }
 .desktop {
     display: none !important;
@@ -303,6 +355,12 @@ div.logo {
 }
 
 @media only screen and (max-width: 320px) {
+	#burger{
+		max-width: 60%;
+	}
+nav .burger img {
+    max-width: 100%;
+}
 .mission {
     padding: 5px;
 }
@@ -354,26 +412,33 @@ div.logo {
 }
 
 @media only screen and (min-width: 1800px) {
-.desktop a {
+.desktop {
     margin-right: 185px;
 }
 }
 
 @media only screen and (min-width: 769px) {
-	.hjemmesidecut{
-		max-height: 350px;
-	}
-	.ceo{
-		height: 50%;
-	}
-	.pakke{
-		height: 110px;
+.navbar .active a {
+    text-decoration-line: underline;
+}
+.hjemmesidecut {
+    max-height: 350px;
+}
+.ceo {
+    height: 50%;
+}
+.pakke {
+    height: 110px;
+}
+.punkter h1{
+		text-align: center;
 	}
 .punkter .content p {
     max-width: 80%;
+	margin: 0 0 0 12%;
 }
 .punkter .content {
-	text-align: left;
+    text-align: left;
     height: 350px;
 }
 .mission h1 {
