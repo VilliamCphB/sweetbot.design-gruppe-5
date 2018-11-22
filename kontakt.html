@@ -5,6 +5,7 @@
 	<title>Sweetbot</title>
 	<link rel="stylesheet" href="styles/styles.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
 	<script>
 		$(document).ready(function() {
   $('div.dropdown').each(function() {
@@ -25,6 +26,42 @@
   });
 });
 	</script>
+		<script>
+	
+	$(document).ready(function(){
+		// alt indefor denne anonyme funktion bliver først udført, når dokumentet (DOM) er klar!
+		
+		// en variabel, som kan bruges indenfor denne funktion (variable scope!) 
+		var msg = $('#resultat');
+		
+		// skriver ind i konsolen (test og debug feature)
+		console.log('jQuery er der!');
+		
+		// jQuery selector (id knap) samt eventhandler (click), som udfører funktionen klik
+		$('#knap').click(klik);
+		
+		// implementering af scroll animationen
+		$('nav a').click(function(){
+			// this = elementet som "ejer" (= udløser) funktionen, 
+			// this.hash læser href attributet af elementet, og få fat i en URL som starter med #
+			$(window).scrollTo(this.hash, 1000);
+		});
+		
+		// en funktion
+		function klik() {
+		// hvis tekstfelt har ingen (!) value
+		if(!$('#tekstfelt' && '#tekstfelt2' && '#tekstfelt3' && '#tekstfelt4' && '#message').val()){
+		   //alert('Please - fill in your name!');
+			msg.html('Venligst udfyld alle felter. Tak.').css('color', '#DF9B67');
+		   } else{ // dvs. hvis tekstfelt har et værdi (er udfyldt)
+			  var brugerensNavn = $('#tekstfelt').val();
+			  msg.html('Tak, ' + brugerensNavn +'.Vi vender tilbage hurtigst muligt.').css('color', '#C9DB50','font-family', 'lato');
+		   }	   
+			
+	}
+						
+});
+</script>
 	</head>
 
 	<body>
@@ -52,106 +89,60 @@
         </div>
   </div>
     </div>
-<div id="udreGrid" class="udreGrid grid">
-      <div id="grid" class="grid grid-pad">
-    <div id="bar" class="bar">
-          <div class="hide-on-mobile">
-        <div class="col-2-12 bar midt">
-              <div class="content"> </div>
-            </div>
-        <div class="col-2-12 bar midt">
-              <div class="content"> <a href="index.html"> </a>
-            <div class="centered"> </div>
-          </div>
-            </div>
-        <div class="col-2-12 bar midt">
-              <div class="content"> <a href="index.html"> </a>
-            <div class="centered"> </div>
-          </div>
-            </div>
-        <div class="col-3-12 bar">
-              <div class="content"> <a href="index.html"> </a>
-            <div class="centered"> </div>
-          </div>
-            </div>
-      </div>
-        </div>
-    <div id="mission" class="col-1-1">
-          <div class="content"> <img src="images/Banner.jpg" alt="">
-        <div class="mission">
-              <h1>Mission Statement</h1>
-            </div>
-      </div>
-        </div>
-    <div class="punkter">
-          <div class="col-4-12">
-        <div class="content">
-              <h1> Webudvikling </h1>
-              <div>
-            <p>Vi er jeres digitale partner, uanset hvad jeres næste digitale projekt måtte være. Vi er her for at optimere jeres forretningsmæssige potentiale og støtte jer i digitaliseringsprocessen. Vi udvikler, designer, integrerer, markedsfører og projektstyrer – vi er et full-service bureau, der tager ansvar fra start til slut.</p>
-          </div>
-            </div>
-      </div>
-          <div class="col-4-12">
-        <div class="content">
-              <h1> Digital Security </h1>
-              <div>
-            <p>Digitaliseringen griber om sig. Det skaber en masse muligheder, men også helt nye udfordringer for borgere, virksomheder og myndigheder. I takt med, at vores interaktion og kommunikation bliver netbaseret, forøges risikoen for læk og misbrug af vores følsomme data. Kriminelle har i høj grad flyttet deres aktiviteter over på nettet, mens stater indsamler data og overvåger det digitale liv.</p>
-          </div>
-            </div>
-      </div>
-          <div class="col-4-12">
-        <div class="content">
-              <h1> Branding </h1>
-              <div>
-            <p> Med en branding strategi skaber du en stærkere position på markedet, så nye kunder bliver nemmere og billigere at tiltrække, samtidig med at nuværende kunder bliver mindre tilføjelige til at skifte leverandør. Ligeledes hjælper et stærkt brand til at tiltrække nye medarbejdere.</p>
-          </div>
-            </div>
-      </div>
-        </div>
-    <div class="pakker">
-          <div class="col-4-12 pakke">
-        <div class="content">
-              <h3>Webpakke</h3>
-              <p>Webudvilking + branding</p>
-            </div>
-      </div>
-          <div class="col-4-12 pakke">
-        <div class="content">
-              <h3>Industri</h3>
-              <p>Security + webudvikling + branding</p>
-            </div>
-      </div>
-          <div class="col-4-12 pakke">
-        <div class="content">
-              <h3>Deluxe</h3>
-              <p>Security + webudvikling + branding + webshop</p>
-            </div>
-      </div>
-        </div>
-    <div class="col-1-1">
-          <div class="content">
-        <p>Footer</p>
-      </div>
-        </div>
+		<main>
+		<div id="form">
+    <section class="centered" id="kontakt">
+      <input type="text" id="tekstfelt" placeholder="Dit navn.." >
+      <br/>
+      <input type="text" id="tekstfelt2" placeholder="Firmanavn.." >
+      <br/>
+      <input type="text" id="tekstfelt3" placeholder="Din/Jeres email.." >
+      <br/>
+      <select style="width: 322px" id="Mobility" name="Mobility" >
+        <option selected="">Vælg afdeling..</option>
+        <option>Webudvikling</option>
+        <option>Digital Sikkerhed</option>
+        <option>Marketing</option>
+        <option>Regnskab</option>
+        <option>Salg</option>
+      </select>
+      <input type="text" id="tekstfelt4" placeholder="Overskrift..">
+      <br/>
+      <textarea name="message" id="message" placeholder="Meddelelse.."></textarea>
+      <br/>
+      <input type="button" id="knap" value="Send" onclick="klik()"/>
+      <div id="resultat" class="tak"> </div>
+    </section>
   </div>
-    </div>
-<script>
-	document.addEventListener('mouseup', function (e) {
-    var container = document.getElementById('myLinks');
+</main>
+		<div id="footer" class="col-1-1 footer">
+		<div class="col-8-12 links">
+			<p  id="tlf-nr"><a class="text-white" href="tel:004512345678">Tlf.: +45 12345678 </a> </p>
+          <p  id="mail-text"><a class="text-white" href="mailto:kontakt@sweetbot.dk">Kontakt@Sweetbot.dk</a> </p>
+          <a href="tel:004512345678"><img class="kontakt-icon1 text-center" src="./icons/tlfart.png" alt="phone icon"></a> <a href="mailto:kontakt@sweetbot.dk"><img class="kontakt-icon2 text-center" src="./icons/mailart.png" alt="mail icon"></a>
+			</div>
+			<div class="col-4-12 icons">
+			<a href="https://www.facebook.com/" target="_blank"><img class="fb" src="./icons/fbart.png" alt="facebook icon" width="100" height="100"></a> <a href="https://www.instagram.com/" target="_blank"><img class="insta" src="./icons/instaart.png" alt="instagram icon" width="100" height="100"> </a> <a href="https://www.linkedin.com/" target="_blank"><img class="linkedin" src="./icons/linkart.png" alt="linkedin icon" width="100" height="100" ></a>
+			</div>
+			<div class="col-1-1 copyright" >
+			<p> &copy; All rights reserved</p>
+			</div>
+	</div>
 
-    if (!container.contains(e.target)) {
-        container.style.display = 'none';
-    }
-}.bind(this));
-function myFunction() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
-</script>
+	
+    <!--<div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8">
+          <p  id="tlf-nr"><a class="text-white" href="tel:004512345678">Tlf.: +45 12345678 </a> </p>
+          <p  id="mail-text"><a class="text-white" href="mailto:kontakt@sweetbot.dk">Kontakt@Sweetbot.dk</a> </p>
+          <a href="tel:004512345678"><img class="kontakt-icon1 text-center" src="./icons/tlfart.png" alt="phone icon"></a> <a href="mailto:kontakt@sweetbot.dk"><img class="kontakt-icon2 text-center" src="./icons/mailart.png" alt="mail icon"></a> </div>
+        <div class="col-md-4 d-flex justify-content-end" > <a href="https://www.facebook.com/" target="_blank"><img class="fb" src="./icons/fbart.png" alt="facebook icon" width="100" height="100"></a> <a href="https://www.instagram.com/" target="_blank"><img class="insta" src="./icons/instaart.png" alt="instagram icon" width="100" height="100"> </a> <a href="https://www.linkedin.com/" target="_blank"><img class="linkedin" src="./icons/linkart.png" alt="linkedin icon" width="100" height="100" ></a> </div>
+      </div>
+      <div class="row">
+        <div class="col 12 text-white text-center">
+          <p> &copy; All rights reserved</p>
+        </div>
+      </div>
+    </div>-->
 </body>
 </html>
