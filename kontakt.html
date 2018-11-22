@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="da">
+<html>
 	<head>
 	<meta charset="UTF-8">
 	<title>Sweetbot</title>
@@ -28,32 +28,30 @@
 	</head>
 
 	<body>
-<nav>
-      <div class="navbar">
-    <div class="logo"><a href="index.html"><img src="images/Logo.png" alt=""></a></div>
-    <div class="udreBar">
-          <div class="bar">
-        <div class="stykke"> <img src="images/trekant.png" alt=""> </div>
-        <div class="desktop"> <a href="omOs.html">Om os</a> </div>
-        <div class="desktop"> <a href="kontakt.html">Kontakt</a> </div>
-        <div class="desktop"> <a href="#pakker">Pakker</a> </div>
-        <div class="desktop"> <a href="projekter.html">Projekter</a> </div>
-        <div class="desktop"> <a id="hotbot" href="hotbotIndex.html">Hotbot</a> </div>
-        <div id="dropdown-1" class="dropdown dropdown-processed burger"> <a class="dropdown-link" href="#"><img id="burger" src="images/burger.png" alt="options"></a>
-              <div class="dropdown-container" style="display: none;">
-            <ul>
-                  <li><a href="hotbotIndex.html">Hotbot</a></li>
-                  <li><a href="projekter.html">Projekter</a></li>
-                  <li><a href="#pakker">Pakker</a></li>
-                  <li><a href="kontakt.html">Kontakt</a></li>
-                  <li><a href="omOs.html">Om os</a></li>
-                </ul>
-          </div>
+<div class="navbar">
+      <div class="logo"><a href="index.html"><img src="images/Logo.png" alt=""></a></div>
+      <div class="udreBar">
+    <div class="bar">
+          <div class="stykke"> <img src="images/trekant.png" alt=""> </div>
+          <div class="desktop"> <a href="omOs.html">Om os</a> </div>
+          <div class="desktop  active"> <a href="kontakt.html">Kontakt</a> </div>
+          <div class="desktop"> <a href="index.html#pakker">Pakker</a> </div>
+          <div class="desktop"> <a href="projekter.html">Projekter</a> </div>
+          <div class="desktop"> <a id="hotbot" href="hotbotIndex.html">Hotbot</a> </div>
+          <div id="dropdown-1" class="dropdown dropdown-processed burger"> <a class="dropdown-link" href="#"><img id="burger" src="images/burger.png" alt="options"></a>
+        <div class="dropdown-container" style="display: none;">
+              <ul>
+            <li><a href="hotbotIndex.html">Hotbot</a></li>
+            <li><a href="projekter.html">Projekter</a></li>
+            <li><a href="index.html#pakker">Pakker</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="omOs.html">Om os</a></li>
+          </ul>
             </div>
       </div>
         </div>
   </div>
-    </nav>
+    </div>
 <div id="udreGrid" class="udreGrid grid">
       <div id="grid" class="grid grid-pad">
     <div id="bar" class="bar">
@@ -81,7 +79,7 @@
     <div id="mission" class="col-1-1">
           <div class="content"> <img src="images/Banner.jpg" alt="">
         <div class="mission">
-              <h1>Vi perfektionerer den digitale del af din forretning</h1>
+              <h1>Mission Statement</h1>
             </div>
       </div>
         </div>
@@ -113,7 +111,7 @@
         </div>
     <div class="pakker">
           <div class="col-4-12 pakke">
-        <div id="pakker" class="content">
+        <div class="content">
               <h3>Webpakke</h3>
               <p>Webudvilking + branding</p>
             </div>
@@ -138,5 +136,22 @@
         </div>
   </div>
     </div>
+<script>
+	document.addEventListener('mouseup', function (e) {
+    var container = document.getElementById('myLinks');
+
+    if (!container.contains(e.target)) {
+        container.style.display = 'none';
+    }
+}.bind(this));
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
 </body>
 </html>
